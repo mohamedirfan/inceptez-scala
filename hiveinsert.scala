@@ -18,7 +18,6 @@ object hiveinsert
       //.config("spark.sql.warehouse.dir", warehouseLocation)
       .enableHiveSupport()
       .getOrCreate()
-       
        import spark.implicits._
        import spark.sql
        sql("drop table src")
