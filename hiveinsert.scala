@@ -15,7 +15,8 @@ object hiveinsert
        val sc = new SparkContext(conf)
        val spark = SparkSession
       .builder()
-      //.config("spark.sql.warehouse.dir", warehouseLocation)
+      //added code
+	  //.config("spark.sql.warehouse.dir", warehouseLocation)
       .enableHiveSupport()
       .getOrCreate()
        import spark.implicits._
